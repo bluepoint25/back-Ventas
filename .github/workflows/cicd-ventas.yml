@@ -34,7 +34,7 @@ jobs:
       # 4. Build de la imagen Docker y push a ECR
       - name: Build y Push imagen a ECR
         run: |
-          docker build -t back-ventas .
+          docker build -t back-ventas Springboot-API-REST
           docker tag back-ventas:latest ${{ secrets.ECR_REPO_URL_VENTAS }}:latest
           docker push ${{ secrets.ECR_REPO_URL_VENTAS }}:latest
 
